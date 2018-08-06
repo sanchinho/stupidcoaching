@@ -1,0 +1,13 @@
+<h1>Coach answers</h1>
+    <p> <%=@question %></p>
+    <% if @question == "I am going to work" %>
+    <%  @answer = "Great" %>
+    <% elsif @question.last == "?" %>
+    <%  @answer = "Silly question, get dressed and go to work!" %>
+    <% else @answer = "I don't care, get dressed and go to work!" %>
+    <% end %>
+    <p> <%=@answer %> </p>
+
+    <a href="/ask">Ask another question</a>
+    <% link_to 'Ask another question', 'ask' %>
+
